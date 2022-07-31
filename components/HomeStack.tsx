@@ -118,10 +118,7 @@ const SettingStack = () => {
         headerShown: false,
     }}
     >
-
-      <Stack.Screen name="MyTabs" component={MyTabs} />
-      
-      
+      <Stack.Screen name="MyTabs" component={MyTabs} /> 
 
     </Stack.Navigator>
   );

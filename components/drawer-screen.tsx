@@ -6,14 +6,11 @@ import { NavigationContainer, TabActions } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
 } from '@react-navigation/drawer';
 import CustomDrawer from './CustomDrawer';
-
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SettingStack from './HomeStack';
+import Restore from './Restore';
  
 const Tab = createBottomTabNavigator();
 function Home() {
@@ -26,6 +23,7 @@ function Profile() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'  }}>
       <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#e3b39f', }}>Profile Screen</Text>
+      
     </View>
   );
 }
@@ -67,7 +65,19 @@ function MyDrawer() {
           headerTintColor: 'black',
         }}
       />
-      
+       
+      <Drawer.Screen name="Register " component={Restore}
+        options={{
+          drawerIcon: ({ color }) => (
+            <Ionicons name="save-outline" size={22} color={ color} />
+          ),
+          headerStyle: {
+            backgroundColor: '#abd9d2',
+            height: 100,
+          },
+          headerTintColor: 'black',
+        }}
+      />
     </Drawer.Navigator>
   );
 }
