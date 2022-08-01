@@ -157,7 +157,7 @@ function RegisterScreen({ navigation }) {
   /*<Button title="Go back" onPress={() => navigation.goBack()} />*/
 }
 
-function SavedDataScreen({ navigation }) {
+function SavedDataScreen({ navigation}: any) {
   const [textInputValue, setTextInputValue] = useState("");
   const [Uname, getName] = useState("");
 

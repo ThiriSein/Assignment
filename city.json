@@ -1,0 +1,22 @@
+{
+  "city": [
+    {
+      "id": "001",
+      "city": "Yangon",
+      "sec_city": "Mandalay",
+      "country": "Myanmar"
+    },
+    {
+      "id": "002",
+      "city": "Jurong East",
+      "sec_city": "Tampines",
+      "country": "Singpore"
+    },
+    {
+      "id": "003",
+      "city": "Washington, D.C.",
+      "sec_city": "New York",
+      "country": "America"
+    }
+  ]
+}

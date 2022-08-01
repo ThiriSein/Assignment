@@ -11,6 +11,7 @@ import CustomDrawer from './CustomDrawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SettingStack from './HomeStack';
 import Restore from './Restore';
+import Parsing from '../JSON_parsing';
  
 const Tab = createBottomTabNavigator();
 function Home() {
@@ -70,6 +71,18 @@ function MyDrawer() {
         options={{
           drawerIcon: ({ color }) => (
             <Ionicons name="save-outline" size={22} color={ color} />
+          ),
+          headerStyle: {
+            backgroundColor: '#abd9d2',
+            height: 100,
+          },
+          headerTintColor: 'black',
+        }}
+      />
+      <Drawer.Screen name="Parsing " component={Parsing}
+        options={{
+          drawerIcon: ({ color }) => (
+            <Ionicons name="mail-outline" size={22} color={ color} />
           ),
           headerStyle: {
             backgroundColor: '#abd9d2',
