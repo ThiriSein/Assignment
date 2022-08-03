@@ -9,9 +9,13 @@ import {
 } from '@react-navigation/drawer';
 import CustomDrawer from './CustomDrawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { AiFillFire } from "react-icons/ai";
 import SettingStack from './HomeStack';
 import Restore from './Restore';
 import Parsing from '../JSON_parsing';
+import userDetailComponent from '../Hook/UseContexT';
+import Count from "../Hook/UseReducer";
+import Parent from "../Hook/Parent";
  
 const Tab = createBottomTabNavigator();
 function Home() {
@@ -54,10 +58,10 @@ function MyDrawer() {
           ),
         })}
       />
-      <Drawer.Screen name="Favourite" component={Profile}
+      <Drawer.Screen name="Profiles" component={Profile}
         options={{
           drawerIcon: ({ color }) => (
-            <Ionicons name="heart-outline" size={22} color={ color} />
+            <Ionicons name="person-outline" size={22} color={ color} />
           ),
           headerStyle: {
             backgroundColor: '#e3b39f',
@@ -67,10 +71,10 @@ function MyDrawer() {
         }}
       />
        
-      <Drawer.Screen name="Register " component={Restore}
+      <Drawer.Screen name="Register" component={Restore}
         options={{
           drawerIcon: ({ color }) => (
-            <Ionicons name="save-outline" size={22} color={ color} />
+            <Ionicons name="receipt-outline" size={22} color={ color} />
           ),
           headerStyle: {
             backgroundColor: '#abd9d2',
@@ -82,7 +86,7 @@ function MyDrawer() {
       <Drawer.Screen name="Parsing " component={Parsing}
         options={{
           drawerIcon: ({ color }) => (
-            <Ionicons name="mail-outline" size={22} color={ color} />
+            <Ionicons name="logo-octocat" size={22} color={ color} />
           ),
           headerStyle: {
             backgroundColor: '#abd9d2',
@@ -91,7 +95,36 @@ function MyDrawer() {
           headerTintColor: 'black',
         }}
       />
+        <Drawer.Screen name="Hook" component={userDetailComponent}
+        options={{
+          drawerIcon: ({ color }) => (
+            
+            <Ionicons name="beer-outline" size={22} color={ color} />
+          ),
+          headerStyle: {
+            backgroundColor: '#e3b39f',
+            height: 100,
+          },
+          headerTintColor: 'black',
+        }}
+  
+      />
+      <Drawer.Screen name="Life-Cycle" component={Parent}
+        options={{
+          drawerIcon: ({ color }) => (
+            
+            <Ionicons name="paw-sharp" size={22} color={ color} />
+          ),
+          headerStyle: {
+            backgroundColor: '#e3b39f',
+            height: 100,
+          },
+          headerTintColor: 'black',
+        }}
+  
+      />
     </Drawer.Navigator>
+
   );
 }
 
