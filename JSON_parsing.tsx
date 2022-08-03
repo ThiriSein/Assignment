@@ -34,10 +34,13 @@ export default function Parsing() {
         renderItem={({ item, i }) => (
           <View style={styles.row} key={i}>
             <Image source={{ uri: item.avatar }} style={styles.avatar} />
-            <View >
-              <Text style={styles.textCus}> {item.first_name} {item.last_name}</Text>
+            <View>
+              <Text style={styles.textCus}>
+               
+                {item.first_name} {item.last_name}
+              </Text>
 
-              <Text style={{padding: 10,}}> {item.email}</Text>
+              <Text style={{ padding: 10 }}> {item.email}</Text>
             </View>
           </View>
         )}
